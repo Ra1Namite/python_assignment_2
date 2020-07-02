@@ -10,14 +10,25 @@ while True:
     age = input('enter age: ').strip()
     if age.lower() == 'quit':
         break
-    age = int(age)
+    if age == '':
+        age = None
+    else:
+        age = int(age)
+
     x = (first_name, last_name, age)
     lst.append(x)
 
 print('\nInitial list:',lst)
 
-print('\nSorting by age....')
-lst.sort(key = lambda x: x[2])
-print('\nSorted list:', lst)
+lst1 = [v for i,v in enumerate(lst) if v[2] != None]
+lst2 = [v[2] for v in lst1]
 
-    
+average_age = sum(lst2)/len(lst2)
+print(f'\naverage age is {average_age}\n')
+
+for x in lst1:
+    if x[2] > average_age:
+        print(f'{x[0]} {x[1]}: old')
+    else:
+        print(f'{x[0]} {x[1]}: young')
+     
