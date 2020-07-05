@@ -1,3 +1,4 @@
+#function definiton
 def read_csv(filename):
     import csv
 
@@ -16,8 +17,11 @@ def read_csv(filename):
             my_list.append(my_dict)
     return my_list
 
+#function call
 
-print(read_csv('new.csv'))
+output = read_csv('new.csv')
+print(output)
+
 
             
 

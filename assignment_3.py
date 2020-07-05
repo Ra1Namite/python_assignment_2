@@ -8,7 +8,7 @@ for x in lst1:
     anagram_list.append(x)
     for y in lst1:
         if len(x) == len(y):
-            if y != x and (sorted(x) == sorted(y)):
+            if y != x and (sorted(x.lower()) == sorted(y.lower())):
                 anagram_list.append(y)
         
     if len(anagram_list) > 1:

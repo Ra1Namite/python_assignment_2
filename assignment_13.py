@@ -11,5 +11,5 @@ def write_csv(filename, my_list):
 
 #function call
 
-write_csv('new.txt', [('George', '4312 Abbey Road', 22), ('John', '54 Love Ave', 21)])
+write_csv('new.csv', [('George', '4312 Abbey Road', 22), ('John', '54 Love Ave', 21)])
 
